@@ -40,7 +40,7 @@
 //
 
 /** The version of this GeSHi file */
-define('GESHI_VERSION', '1.0.9.0');
+define('GESHI_VERSION', '1.0.9.1');
 
 // Define the root directory for the GeSHi code tree
 if (!defined('GESHI_ROOT')) {
@@ -4045,7 +4045,7 @@ class GeSHi {
                   $parsed_code .= str_repeat('</span>', $close);
                   $close = 0;
                 }
-                elseif ($i + 1 < $n) {
+                if ($i + 1 < $n) {
                     $parsed_code .= "\n";
                 }
                 unset($code[$i]);
